@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+.main__right {
+  border: 1px solid lightgray;
+  flex: 0.3;
+}
+.main__left {
+  border: 1px solid yellow;
+  flex: 0.7;
+}

@@ -1,0 +1,36 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100vw;
+  background: white;
+  z-index: 10;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+.footer > small {
+  color: gray;
+}
+.footer > small > span {
+  color: lightseagreen;
+  cursor: pointer;
+}
+.footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer > div > p {
+  text-decoration: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.footer__facebook--icon {
+  color: #385185 !important;
+}
+.footer__twitter--icon {
+  color: #0095f6 !important;
+}
