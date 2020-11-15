@@ -1,0 +1,23 @@
+.followers {
+}
+.followers__trademarks {
+  padding-top: 30px;
+  margin: 10px 0 10px 0;
+  padding-bottom: 50px;
+}
+.followers__trademarks > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.followers__trademarks > p {
+  color: lightgray;
+  text-transform: inherit;
+  margin-top: 30px;
+  font-size: 13px;
+}
+.followers__trademarks > div > small {
+  cursor: pointer;
+  color: lightgray;
+  font-size: 12px;
+}

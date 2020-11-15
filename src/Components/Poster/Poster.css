@@ -1,0 +1,18 @@
+.poster {
+  width: 100vw !important;
+  height: 100vh !important;
+  display: grid !important;
+  place-items: center !important;
+  border: none !important;
+}
+.poster__poster {
+  width: 100%;
+  max-width: 600px;
+  height: 50vh;
+  background-color: #fff;
+  border: 1px solid lightgray !important;
+  outline: none;
+}
+#poster__files {
+  display: none;
+}

@@ -1,14 +1,46 @@
 .main {
   display: flex;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  position: relative;
+  max-width: 600px;
 }
 .main__right {
-  border: 1px solid lightgray;
   flex: 0.3;
+  padding: 50px 20px;
 }
 .main__left {
-  border: 1px solid yellow;
   flex: 0.7;
+  position: sticky;
+  background-color: var(--body-color);
+  top: 50;
+  right: 0;
+}
+.main__label {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  color: gray;
+  margin-bottom: 10px;
+}
+.main__label > h2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.main__label > small {
+  cursor: pointer;
+}
+
+.main__add {
+  width: 100px !important;
+  height: 100px !important;
+  cursor: pointer !important;
+  background: white !important;
+  position: fixed !important;
+  left: 50px !important;
+  bottom: 50px !important;
+  border: 1px solid lightgray !important;
+}
+.main__add__icon {
 }

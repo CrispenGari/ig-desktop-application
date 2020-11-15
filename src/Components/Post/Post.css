@@ -1,0 +1,131 @@
+.post {
+  max-width: 600px;
+  background: white;
+  margin: 20px 0;
+
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.post__center {
+  padding: 10px;
+}
+.post__center > img {
+  width: 100%;
+  object-fit: contain;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.post__top {
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post__userinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  margin-left: 10px;
+}
+.post__userinfo > small {
+  color: gray;
+  font-size: 12px;
+}
+.post__userinfo > h1 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.post__avatar {
+  width: 45px !important;
+  height: 45px !important;
+  cursor: pointer !important;
+}
+.post__bottom {
+}
+.post__controls {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  justify-content: space-between;
+  width: 100%;
+}
+.post__controls__left {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+.post__bottom > p > strong {
+  margin-right: 5px;
+}
+.post__controls__right {
+}
+.post__controls__right > .MuiSvgIcon-root,
+.post__controls__left > .MuiSvgIcon-root {
+  color: rgb(39, 38, 38);
+  font-size: 30px;
+  cursor: pointer;
+}
+.post__controls__left > .MuiSvgIcon-root {
+  margin-left: 10px;
+}
+.post__commentForm {
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid lightgray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--body-color);
+}
+.post__commentForm > input {
+  background: inherit;
+  flex: 1;
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+.post__commentBtn {
+  color: #38acf7;
+  opacity: 0.5;
+  background: inherit;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.post__commentBtn--active {
+  opacity: 1;
+}
+.post__liked {
+  color: #ed4956 !important;
+}
+.post__bottom > p {
+  padding: 5px 20px;
+  display: flex;
+  font-size: 15px;
+}
+
+.post__all_comments {
+  color: gray;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+}
+.post__likes > strong {
+  margin: 0 5px;
+}
+.post__caption {
+}
+.post__likers__avatar {
+  width: 25px !important;
+  height: 25px !important;
+  cursor: pointer !important;
+  margin-right: 10px !important;
+}

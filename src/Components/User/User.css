@@ -1,31 +1,30 @@
-.follower {
+.user {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px auto;
+  margin-bottom: 10px;
   cursor: pointer;
 }
-.follower__info {
+.user__info {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 10px;
 }
-.follower__avatar {
-  width: 35px !important;
-  height: 35px !important;
+.user__avatar {
+  width: 50px !important;
+  height: 50px !important;
   cursor: pointer !important;
 }
-.follower__info > h1 {
-  font-size: 13px;
+.user__info > h1 {
+  font-size: 15px;
   font-weight: 500;
 }
-.follower__info > small {
+.user__info > small {
   color: gray;
-  font-size: 13px;
 }
-.follower > small {
+.user > small {
   color: #38acf7;
   cursor: pointer;
 }

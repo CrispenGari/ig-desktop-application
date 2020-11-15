@@ -1,0 +1,20 @@
+.stories {
+  background: white;
+  margin: 20px 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  border: 1px solid #ccc;
+  display: flex;
+  padding: 15px 5px 15px 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+}
+.stories::-webkit-scrollbar {
+  display: none;
+}
+.story__avatar {
+  border: 2px solid #e85455 !important;
+  width: 50px !important;
+  height: 50px !important;
+}

@@ -2,7 +2,7 @@
 import './App.css';
 import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {Menus, Authentication, Main, Footer, Header} from './Components'
+import {Menus, Authentication, Footer, Header, Main} from './Components'
 import actions from './actions'
 import authentication from './backend/firebase'
 
