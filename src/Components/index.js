@@ -14,3 +14,6 @@ export {default as User} from  './User/User';
 export {default as Comments} from  './Comments/Comments';
 export {default as Comment} from  './Comment/Comment';
 export {default as Poster} from  './Poster/Poster';
+export {default as Notifications} from  './Notifications/Notifications';
+export {default as Settings} from  './Settings/Settings';
+export {default as Profile} from  './Profile/Profile';

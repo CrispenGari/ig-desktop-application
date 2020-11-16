@@ -1,0 +1,123 @@
+.settings {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  background: white;
+}
+.settings__left {
+  flex: 0.25;
+}
+.settings__left > h1:first-child {
+  border-left: 3px solid black;
+}
+.settings__left > h1 {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 0;
+  cursor: pointer;
+  padding: 10px;
+}
+.settings__right {
+  flex: 0.75;
+  border-left: 1px solid #ccc;
+  padding: 20px 50px;
+}
+.settings__top {
+  display: flex;
+}
+.settings__avatar {
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer !important;
+}
+.settings__top__info {
+  margin-left: 20px;
+}
+.settings__top__info > h1 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.settings__top__info > h2 {
+  color: #38acf7;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.settings__form__group {
+  display: flex;
+  margin-top: 30px;
+}
+.settings__form__group > h2 {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100px;
+}
+.settings__form__group > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+.settings__form__group > div > input {
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: var(--body-color);
+  outline: none;
+}
+.settings__form__group > div > small {
+  color: gray;
+}
+.settings__form__group > div > small > span {
+  color: #38acf7;
+  cursor: pointer;
+}
+.settings__form__group > div > h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+}
+.settings__form__group > div > small {
+  color: gray;
+}
+.settings__buttons {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+.settings__buttons > .settings__button {
+  text-transform: inherit !important;
+}
+.settings__buttons > .settings__button:first-child {
+  text-transform: inherit !important;
+  color: white !important;
+  background: #38acf7 !important;
+}
+.settings__buttons > .settings__button:last-child {
+  text-transform: inherit !important;
+  color: #38acf7 !important;
+  background-color: inherit !important;
+}
+.settings__form__group > div.setting__checkbutton > div {
+  display: flex;
+  font-size: small;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: gray;
+  flex: 1;
+  align-items: center;
+}
+.settings__form__group > div.setting__checkbutton > div > input {
+  margin-right: 5px;
+}
+.settings__form__group > div.setting__checkbutton > div > small {
+  color: #38acf7 !important;
+  cursor: pointer;
+}

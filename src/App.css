@@ -17,4 +17,8 @@ body::-webkit-scrollbar {
   overflow-y: scroll;
   width: 100%;
   flex: 1;
+  overflow-x: hidden;
+}
+.app__main::-webkit-scrollbar {
+  display: none;
 }

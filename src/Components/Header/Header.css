@@ -52,3 +52,13 @@
   border: 2px solid #e85455 !important;
   cursor: pointer;
 }
+.header__menu__item {
+  display: flex !important;
+  font-size: 12px !important;
+  color: gray !important;
+  align-items: center !important;
+}
+.header__menu__item > .MuiSvgIcon-root {
+  margin-right: 10px;
+  font-weight: 20px;
+}

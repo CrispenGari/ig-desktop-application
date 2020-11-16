@@ -1,0 +1,156 @@
+.profile {
+  width: 100%;
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+.profile__top {
+}
+.profile__top__user {
+  display: flex;
+}
+.profile__avatar {
+  width: 150px !important;
+  height: 150px !important;
+  border: 2px solid #e85455 !important;
+  cursor: pointer !important;
+  margin-right: 10px !important;
+}
+.profile__top__info {
+}
+.profile__top__info > p {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 20px;
+}
+.profile__top__info > p:first-child > h1 {
+  margin-right: 15px;
+  font-weight: 500;
+  font-size: 17px;
+}
+.profile__top__info > p:first-child > button {
+  cursor: pointer;
+  border: 0.5px solid #ccc;
+  background-color: white;
+  margin: 0 10px !important;
+  width: 120px;
+  border-radius: 3px;
+  padding: 5px;
+}
+.profile__top__info > p:first-child > button:hover {
+  background-color: var(--body-color);
+}
+.profile__top__info > p:first-child > .MuiSvgIcon-root {
+  cursor: pointer;
+  color: gray;
+}
+.profile__top__info > p:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.profile__top__info > p:nth-child(2) > span:nth-child(2) {
+  margin: 0 35px;
+}
+.profile__top__info > p:nth-child(2) > span > small:first-child {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.profile__top__info > p:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profile__top__highlights {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: 100%;
+  margin: 50px 0;
+}
+.profile__top__highlights::-webkit-scrollbar {
+  display: none;
+}
+.profile__highlight {
+  width: 80px !important;
+  height: 80px !important;
+  border: 2px solid #e85455 !important;
+  cursor: pointer !important;
+  margin-right: 10px !important;
+}
+.profile__top__highlights > div > h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.profile__posts {
+  border-top: 0.7px solid lightgray;
+}
+.profile__post__nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  justify-content: space-between;
+}
+.profile__post__nav > div {
+  display: flex;
+  align-items: center;
+}
+.profile__post__nav > div > p {
+  text-transform: uppercase;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  color: gray;
+  padding: 20px 5px 10px 5px;
+}
+.profile__post__nav > div > p > .MuiSvgIcon-root {
+  margin-right: 5px;
+}
+.profile__post {
+  width: 300px !important;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  margin: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.profile__post > img {
+  width: 300px !important;
+  height: 300px;
+  object-fit: contain;
+}
+.profile__posts__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.profile__post__summary {
+  width: 300px !important;
+  height: 300px !important;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+  color: white !important;
+  display: none;
+}
+.profile__post__summary > small {
+  display: flex;
+  align-items: center;
+  width: 60px;
+}
+.profile__post__summary > small > .MuiSvgIcon-root {
+  margin-right: 5px;
+}
+.profile__post:hover > .profile__post__summary {
+  display: flex;
+}
