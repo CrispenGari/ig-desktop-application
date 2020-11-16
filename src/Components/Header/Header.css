@@ -62,3 +62,62 @@
   margin-right: 10px;
   font-weight: 20px;
 }
+.header__menu__item__notifications {
+  display: flex;
+  justify-content: space-between;
+}
+.header__menu__avatar__request {
+  margin-right: 10px !important;
+  border: 2px solid #e85455 !important;
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer !important;
+}
+.header__menu__notification__center {
+  border-bottom: 0.5px solid lightgray;
+  flex: 1;
+}
+.header__menu__notification__center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.header__menu__avatar__request--none {
+  background-color: #e85455 !important;
+  color: white !important;
+  margin-right: 10px !important;
+  border: 2px solid #e85455 !important;
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer !important;
+}
+
+.header__menu__notification__center > div {
+  flex: 1;
+}
+.header__menu__notification__center > div > h1 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.header__menu__notification__button {
+  background: #38acf7 !important;
+  color: white !important;
+  text-transform: inherit !important;
+  width: 90px !important;
+  height: 30px !important;
+  margin-left: 10px !important;
+}
+.header__menu__center > .MuiSvgIcon-root,
+.header__menu__notification__center > div > small {
+  color: gray;
+}
+.header__menu__center {
+  border: none;
+}
+.header__notifications {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  height: 100% !important;
+  max-height: 500px !important;
+}

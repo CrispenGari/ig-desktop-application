@@ -2,7 +2,6 @@
   max-width: 600px;
   background: white;
   margin: 20px 0;
-
   border: 1px solid lightgray;
   border-radius: 5px;
 }
@@ -128,4 +127,20 @@
   height: 25px !important;
   cursor: pointer !important;
   margin-right: 10px !important;
+}
+.post__menu {
+}
+.post__menu__item {
+  display: flex !important;
+  justify-content: center !important;
+  color: #ed4956 !important;
+  width: 300px !important;
+  border-bottom: 0.5px solid lightgray !important;
+}
+.post__menu__item:nth-child(3),
+.post__menu__item:nth-child(4) {
+  color: black !important;
+}
+.post__menu__item:nth-child(4) {
+  border: none !important;
 }

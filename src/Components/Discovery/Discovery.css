@@ -1,0 +1,51 @@
+.discovery {
+  width: 100%;
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.discovery__post {
+  width: 300px !important;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  margin: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.discovery__post > img {
+  width: 300px !important;
+  height: 300px;
+  object-fit: contain;
+}
+.discovery__posts__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.discovery__post__summary {
+  width: 300px !important;
+  height: 300px !important;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+  color: white !important;
+  display: none;
+}
+.discovery__post__summary > small {
+  display: flex;
+  align-items: center;
+  width: 60px;
+}
+.discovery__post__summary > small > .MuiSvgIcon-root {
+  margin-right: 5px;
+}
+.discovery__post:hover > .discovery__post__summary {
+  display: flex;
+}

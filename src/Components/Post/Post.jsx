@@ -1,24 +1,36 @@
 import React, { useState } from 'react'
 import './Post.css'
-import {Avatar, IconButton} from '@material-ui/core'
+import {Avatar, IconButton, Menu, MenuItem} from '@material-ui/core'
 import {Comments} from '../../Components'
+import {useHistory} from 'react-router-dom'
 import {MoreHoriz, TurnedInNot, Favorite, FavoriteBorder, Telegram, ChatBubbleOutline} from '@material-ui/icons'
 const Post = () => {
     const [comment, setComment] = useState("")
     const [open, setOpen] = useState(false)
     const [liked, setLiked] = useState(false)
+    const [menu, setMenu] = useState(null)
+    const history = useHistory()
     const postComment = (e)=>{
         e.preventDefault();
     }
-  const handleLike =()=>{
-      setLiked(!liked)
-  }
-  const handleClose =()=>{
-    setOpen(false)
-  }
-  const handleOpen =()=>{
-      setOpen(true)
-  }
+    const handleLike =()=>{
+        setLiked(!liked)
+    }
+    const handleClose =()=>{
+        setOpen(false)
+    }
+    const handleOpen =()=>{
+        setOpen(true)
+    }
+    const messages = ()=>{
+        history.push('/messages')
+    }
+    const handleOpenMenu = (event) => {
+        setMenu(event.currentTarget);
+      };
+      const handleCloseMenu = () => {
+        setMenu(null);
+      };
     return (
         <div className="post">
             <Comments open={open} handleClose={handleClose}/>
@@ -28,9 +40,23 @@ const Post = () => {
                     <h1>User name</h1>
                     <small>Location</small>
                 </div>
-                <IconButton>
+                <IconButton onClick={handleOpenMenu}>
                     <MoreHoriz className="post__options"/>
                 </IconButton>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={menu}
+                    keepMounted
+                    open={Boolean(menu)}
+                    onClose={handleCloseMenu}
+                    className="post__menu"
+                >
+                    
+                    <MenuItem className="post__menu__item" onClick={handleCloseMenu}>Report</MenuItem>
+                    <MenuItem className="post__menu__item" onClick={handleCloseMenu} >Unfollow</MenuItem>
+                    <MenuItem className="post__menu__item" onClick={handleCloseMenu} >Go to post</MenuItem>
+                    <MenuItem className="post__menu__item" onClick={handleCloseMenu} >Cancel</MenuItem>
+                 </Menu>
            </div>
            <div className="post__center">
                 <img src="https://memegenerator.net/img/instances/66655536.jpg" alt="post"/>
@@ -41,8 +67,8 @@ const Post = () => {
                         {
                             liked? <Favorite className="post__liked" onClick={handleLike}/> : <FavoriteBorder className="post__unliked" onClick={handleLike}/>
                         }
-                        <ChatBubbleOutline className="post__commentIcon"/>
-                        <Telegram/>
+                        <ChatBubbleOutline className="post__commentIcon" onClick={handleOpen} />
+                        <Telegram onClick={messages}/>
                     </div>
                     <div className="post__controls__right">
                         <TurnedInNot/>

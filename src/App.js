@@ -2,7 +2,7 @@
 import './App.css';
 import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {Menus, Authentication, Footer, Header, Main, Settings, Profile, Notifications} from './Components'
+import {Menus,Messages, Authentication, Footer, Header, Main, Settings, Profile,Discovery} from './Components'
 import actions from './actions'
 import authentication from './backend/firebase'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -10,7 +10,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 const App =()=>{
   const dispatch = useDispatch()
   const user = useSelector(state => state.user)
-  
   useEffect(()=>{
     const unsubscribe = authentication.auth.onAuthStateChanged(authUser=>{
       if(authUser){
@@ -37,8 +36,11 @@ const App =()=>{
                <Router path="/profile">
                   <Profile/>
                </Router>
-               <Router path="/notifications">
-                  <Notifications/>
+               <Router path="/discovery">
+                  <Discovery/>
+               </Router>
+               <Router path="/messages">
+                  <Messages/>
                </Router>
                <Router path="/">
                   <Main/>  
