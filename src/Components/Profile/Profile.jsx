@@ -1,11 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {SettingsOutlined, ChatBubble, Favorite, BookmarkBorder, AccountBox
 , GridOn,LiveTv} from '@material-ui/icons'
 import {Avatar} from '@material-ui/core'
 import {useSelector} from 'react-redux'
+import {db} from '../../backend/firebase'
 import './Profile.css'
 const Profile = () => {
     const user = useSelector(state => state.user)
+    const [myposts, setMyPosts] = useState([])
+    useEffect(()=>{
+        db.DATABASE.collection('posts').orderBy('timestamp', 'desc').where("username", "==", user?.displayName).onSnapshot(snapshot => {
+            setMyPosts(snapshot.docs.map(doc=>doc.data()))
+        })
+    }, [user])
     return (
         <div className="profile">
             <div className="profile__top">
@@ -49,16 +56,15 @@ const Profile = () => {
                 </div>
                 <div className="profile__posts__container">
                 {
-                    Array(8).fill(0).map((el, i)=>{
+                    myposts?.map((mypost, i)=>{
                         return (
                         <div className="profile__post" key={i} style={{
-                            backgroundImage: `url("https://memegenerator.net/img/instances/66655536.jpg")`,
+                            backgroundImage: `url(${mypost?.media_type=== "VIDEO"? "https://lh3.googleusercontent.com/proxy/2GEF7_tXHAZvbRvvgbOwmwz23bIzDtmkjTXUP_TyujobBWE8vgJMjwx1FSBUNIsVxwo5Y_fVcgCcio0jF5Dy04zc8KUiH5KUc1XwiG0WQKbpMaXxBR6QTicbf6z56e_1LKyfnA0jDO1pZpP3t7Jq6FyHS_yRH8IFq5uo8H6F" : mypost?.media_url})`,
                         }}>
                         <div className="profile__post__summary">
                         <small>{<Favorite/>} 45 </small>
                         <small><ChatBubble /> 5</small>
                             </div>
-                        {/* <img src="" alt="post"/> */}
                        </div>)
                     })
                 }

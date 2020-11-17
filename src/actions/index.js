@@ -5,7 +5,14 @@ const setUser =(value)=>{
         value: value
     }
 }
+const allPosts = (value)=>{
+    return{
+        type: constants.ALL_POSTS,
+        value: value
+    }
+}
 const actions = {
-    setUser : setUser
+    setUser : setUser,
+    allPosts: allPosts
 }
 export default actions

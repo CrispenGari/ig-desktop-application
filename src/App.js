@@ -6,7 +6,7 @@ import {Menus,Messages, Authentication, Footer, Header, Main, Settings, Profile,
 import actions from './actions'
 import authentication from './backend/firebase'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-
+import {db} from './backend/firebase'
 const App =()=>{
   const dispatch = useDispatch()
   const user = useSelector(state => state.user)
@@ -22,6 +22,14 @@ const App =()=>{
       unsubscribe()
     }
   },[dispatch])
+
+  useEffect(()=>{
+     db.DATABASE.collection("posts").orderBy("timestamp", "desc").onSnapshot(snapshot=>{
+        snapshot.docs.map(doc=>{
+        return dispatch(actions.allPosts({id: doc.id, data: doc.data()}))
+       })
+     })
+  }, [dispatch])
   if(user){
       return (
         <div className="app">
@@ -62,5 +70,5 @@ const App =()=>{
     );
   }
 }
-
+console.clear()
 export default App;

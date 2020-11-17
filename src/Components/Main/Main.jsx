@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import './Main.css'
-import authentication from '../../backend/firebase'
 import {useSelector} from 'react-redux'
 import {User, Stories, Followers, Post, Poster} from '../../Components'
 import {AddAPhoto} from '@material-ui/icons'
 import {IconButton} from '@material-ui/core'
 const Main = () => {
     const [open, setOpen] = useState(false)
+    const posts = useSelector(state => state.posts)
     const handleClose =()=>{
         setOpen(false)
       }
@@ -21,8 +21,8 @@ const Main = () => {
             <div className="main__left">
                 <Stories/>
                 {
-                    Array(10).fill(null).map((el, i)=>{
-                        return  <Post key={i}/>
+                    posts.map((post, index)=>{
+                        return  <Post key={index} id={post?.id} data={post?.data}/>
                     })
                 }
                

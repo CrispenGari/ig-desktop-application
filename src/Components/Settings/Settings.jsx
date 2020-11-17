@@ -8,15 +8,12 @@ const Settings = () => {
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
     const [username, setUserName] = useState("")
-
     useEffect(()=>{
         setEmail(user?.email)
         setName(user?.displayName)
         setPhoneNumber(user?.phoneNumber)
         setUserName(user?.displayName)
     }, [user])
-
-    console.log("The user is , " , user);
     return (
         <div className="settings">
             <div className="settings__left">
@@ -72,7 +69,7 @@ const Settings = () => {
                  </div>
               </div>
               <div className="settings__form__group">
-                  <h2></h2>
+                  <h2>{""}</h2>
                   <div className="">
                     <h3>Personal Information</h3>
                     <small>
@@ -111,7 +108,7 @@ const Settings = () => {
               </div>
               
               <div className="settings__form__group">
-                  <h2></h2>
+                  <h2>{""}</h2>
                     <div className="settings__buttons">
                   <Button className="settings__button">Submit</Button>
                   <Button className="settings__button">Temporarily disable my account</Button>

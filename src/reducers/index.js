@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
-import basketReducer from './basketReducer'
+import postsReducer from './postsReducer'
 import setUserReducer from './setUserReducer'
 
 const rootReducers = combineReducers({
-    basket: basketReducer,
+    posts: postsReducer,
     user: setUserReducer
 })
 

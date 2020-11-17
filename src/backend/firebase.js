@@ -13,6 +13,8 @@ const firebaseConfig = {
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig)
 const auth = firebaseApp.auth()
+const storage = firebaseApp.storage()
+const database = firebaseApp.firestore()
 const authentication = {
     googleAuthProvider : new firebase.auth.GoogleAuthProvider(),
     facebookAuthProvider : new firebase.auth.FacebookAuthProvider(),
@@ -21,5 +23,8 @@ const authentication = {
     yahooAuthProvider : new firebase.auth.OAuthProvider('yahoo.com'),
     auth: auth
 }
-export const database = firebaseApp.firestore()
+export const db ={
+  DATABASE: database,
+  STORAGE: storage
+}
 export default authentication

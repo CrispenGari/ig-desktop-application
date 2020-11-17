@@ -8,13 +8,15 @@
 .post__center {
   padding: 10px;
 }
-.post__center > img {
+.post__center > img,
+.post__center > video {
   width: 100%;
   object-fit: contain;
   max-width: 500px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  max-height: 400px;
 }
 .post__top {
   padding: 10px;
@@ -100,7 +102,7 @@
   font-weight: bold;
 }
 .post__commentBtn--active {
-  opacity: 1;
+  opacity: 1 !important;
 }
 .post__liked {
   color: #ed4956 !important;

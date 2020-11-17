@@ -10,12 +10,23 @@
   max-width: 600px;
   height: 50vh;
   background-color: #fff;
+  user-select: none;
+  outline: none;
+}
+.poster__poster__container {
+  width: 100%;
+  max-width: 600px;
+  height: 50vh;
+  background-color: #fff;
   border: 1px solid lightgray !important;
   outline: none;
-  padding: 20px !important;
+  padding: 0 20px 20px 20px !important;
   display: flex;
   user-select: none;
   flex-direction: column;
+}
+.poster__progress {
+  margin-bottom: 20px !important;
 }
 .poster__files--hidden {
   display: none;
@@ -76,6 +87,8 @@
   animation: opacity-animation infinite 2s linear;
   animation: color-animation infinite 2s linear;
   border-radius: 5px;
+  padding: 10px;
+  text-align: center;
 }
 .poster__location {
   user-select: none;
@@ -88,6 +101,16 @@
 }
 .poster__location > input[type="checkbox"] {
   margin-right: 5px !important;
+}
+.poster__post__here {
+  color: #38acf7 !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  text-decoration: underline !important;
+}
+.poster__drag__drop--active {
+  border-style: solid !important;
+  border-color: green;
 }
 @keyframes opacity-animation {
   from {

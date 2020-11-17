@@ -6,6 +6,7 @@ const constants ={
     TWITTER :"TWITTER",
     YAHOO :"YAHOO",
     FACEBOOK :"FACEBOOK",
+    ALL_POSTS: "ALL_POSTS"
 }
 const images = [
     "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg",

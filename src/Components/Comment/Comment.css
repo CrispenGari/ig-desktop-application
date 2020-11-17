@@ -37,3 +37,6 @@
   cursor: pointer;
   font-weight: bold;
 }
+span.comment__tag {
+  color: purple !important;
+}
